@@ -1,0 +1,38 @@
+<h1>
+    <md-toolbar color="primary">
+        App de Veilles Techniques
+    </md-toolbar>
+
+    <md-grid-list cols="2" [style.background]="'lightblue'">
+        <md-grid-tile>
+            <md-list>
+                <md-list-item *ngFor="let message of messages">
+                    <img md-list-avatar src="https://randomuser.me/api/portraits/thumb/men/83.jpg" alt="...">
+                    <h3 md-line> {{message.from}} </h3>
+                    <p md-line>
+                        <span> {{message.sujet }} </span><br />
+                        <span class="message"> {{message.message}} </span>
+                    </p>
+                </md-list-item>
+            </md-list>
+        </md-grid-tile>
+
+        <md-grid-tile>
+            <md-card class="demo-card demo-basic">
+                <md-toolbar color="primary">Répondez-vite</md-toolbar>
+                <md-card-content>
+                    <form>
+                        <md-input placeholder="Sujet" maxlength="100" class="demo-full-width" #characterCountHintExample>
+                            <md-hint align="end">{{characterCountHintExample.characterCount}} / 100</md-hint>
+                        </md-input>
+                        <button md-raised-button color="primary"><i class="material-icons">chat</i> Ecrire un message</button>
+                        <md-slide-toggle>Afficher que mes sujets préférés</md-slide-toggle>
+                    </form>
+                </md-card-content>
+            </md-card>
+        </md-grid-tile>
+    </md-grid-list>
+
+
+
+</h1>
