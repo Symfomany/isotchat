@@ -4,6 +4,20 @@
 
 Simple Application for Angular2 with Webpack :
 
+
+### Demo on Firebase
+
+[https://tchat-cabb3.firebaseapp.com/](https://tchat-cabb3.firebaseapp.com/)
+
+
+### Deploy on Firebase
+
+```
+    ng build --prod 
+    firebase login
+    firebase deploy
+```
+
 ### Features:
 
 * Firebase API (options)
@@ -35,12 +49,49 @@ Simple Application for Angular2 with Webpack :
 + Map des users pour les messages
 
 
+#### Some Snippets by John Papa
+
+## TypeScript Snippets
+
+* ng2-bootstrap       // Angular 2 bootstrapping, for main.ts
+* ng2-component       // Angular 2 component
+* ng2-component-root  // Angular 2 root app component
+* ng2-http-get        // Angular 2 http.get with Rx Observable
+* ng2-module          // Angular 2 module
+* ng2-module-root     // Angular 2 root app module
+* ng2-pipe            // Angular 2 pipe
+* ng2-routing         // Angular 2 routing
+* ng2-service         // Angular 2 service
+* ng2-subscribe       // Angular 2 Rx Observable subscription
+
+
+## HTML Snippets fpr Directives
+
+* ng2-ngClass
+* ng2-ngFor
+* ng2-ngIf
+* ng2-ngModel
+* ng2-routerLink
+* ng2-ngStyle
+* ng2-ngSwitch
+
+
+
+### API Docs
+
+[https://angular.io/docs/ts/latest/api/](https://angular.io/docs/ts/latest/api/)
+
+
+### Use Angular CLI
+https://github.com/angular/angular-cli#generating-components-directives-pipes-and-services 
 
 ### Some helps
 
 ![enter image description here](http://i0.wp.com/www.eloquentwebapp.com/wp-content/uploads/2016/05/angular-cli.jpg?resize=1075%2C605)
 
 ![enter image description here](https://res.cloudinary.com/angularclass/image/upload/v1431925418/webpackAndangular2_dwhus9.png)
+
+![enter image description here](https://i.ytimg.com/vi/QLVzozWDYAs/maxresdefault.jpg)
 
 This project was generated with [angular-cli](https://github.com/angular/angular-cli) version 1.0.0-beta.21.
 
