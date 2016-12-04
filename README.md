@@ -2,6 +2,44 @@
 
 ### Webpack + Angular2 + Angular CLI
 
+Simple Application for Angular2 with Webpack :
+
+### Features:
+
+* Firebase API (options)
+* Server Side Render https://github.com/vladotesanovic/angular2-express-slim
+* Build basic Angular App with Webpack & HMR
+* Theme Material Design & Angular Design
+* VSCode settings
+* TSLint & TSDoc
+* Sass support
+* Angular Material Design
+* Angular Google Map in Directive
+* Typescript Support
+* Sourcemap support
+* Types Nodes or Typings Deps for TypeScript
+
+
+### Specs
+
+
++ Colonne qui Liste des users
++ Tchat au Centre
++ Personne online/offline
++ Jetter un Wizz(son)
++ Liens photo
++ Search: rechercher des message
++ Supprimer des conversations
++ Ecrire un message (140 car max)+ heure + personne
++ Partie Setting pour le nb de message, nb de users
++ Map des users pour les messages
+
+
+
+### Some helps
+
+![enter image description here](http://i0.wp.com/www.eloquentwebapp.com/wp-content/uploads/2016/05/angular-cli.jpg?resize=1075%2C605)
+
 ![enter image description here](https://res.cloudinary.com/angularclass/image/upload/v1431925418/webpackAndangular2_dwhus9.png)
 
 This project was generated with [angular-cli](https://github.com/angular/angular-cli) version 1.0.0-beta.21.
