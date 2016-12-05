@@ -7,20 +7,42 @@ import { HttpModule } from '@angular/http';
 import { AppComponent } from './app.component';
 import { MaterialModule } from '@angular/material';
 import { ActionComponent } from './action/action.component';
-import { MessagesComponent } from './messages/messages.component';
+import { MessagesComponent } from './tab/tchat/messages/messages.component';
 
 import { AngularFireModule } from 'angularfire2';
 import { firebaseConfig } from './../environments/firebase';
 import { SidebarComponent } from './sidebar/sidebar.component';
+import { ToolbarComponent } from './toolbar/toolbar.component';
+import { TabComponent } from './tab/tab.component';
+import { TchatComponent } from './tab/tchat/tchat.component';
+import { NotificationsComponent } from './tab/notifications/notifications.component';
+import { MapComponent } from './tab/map/map.component';
+import { FavoriteComponent } from './tab/favorite/favorite.component';
+import { SettingComponent } from './tab/setting/setting.component';
+import { RightmenuComponent } from './rightmenu/rightmenu.component';
+import { AuthentificationDialog } from './authentification/authentification.component';
+
 
 
 
 @NgModule({
     declarations: [
+        AuthentificationDialog,
         AppComponent,
         ActionComponent,
         MessagesComponent,
         SidebarComponent,
+        ToolbarComponent,
+        TabComponent,
+        TchatComponent,
+        NotificationsComponent,
+        MapComponent,
+        FavoriteComponent,
+        SettingComponent,
+        RightmenuComponent,
+    ],
+    entryComponents: [
+        AuthentificationDialog
     ],
     imports: [
         BrowserModule,

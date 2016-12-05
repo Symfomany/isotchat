@@ -1,0 +1,9 @@
+md-input-element {
+    height: 100px;
+}
+
+md-input {
+    display: block;
+    padding: 5px;
+    margin: 5px;
+}

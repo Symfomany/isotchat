@@ -12,6 +12,12 @@ Simple Application for Angular2 with Webpack :
 [https://firebase.google.com/docs/cli/](https://firebase.google.com/docs/cli/)
 
 
+### Debug with TSLint
+
+```
+    ng lint
+```
+
 ### Demo on Firebase
 
 [https://tchat-cabb3.firebaseapp.com/](https://tchat-cabb3.firebaseapp.com/)
