@@ -1,16 +1,25 @@
-<md-list>
-    <md-list-item *ngFor="let message of messages | async">
-        <img md-list-avatar src="{{ message.avatar }}" alt="{{message.name}}">
-        <h3 md-line> {{message.name}} </h3>
-        <p md-line>
-            <span> {{message.sujet }} </span><br />
-            <span class="message"> {{message.lastMessage}} </span>
-        </p>
-        <!--<ul *ngFor="let dialog of message.dialog">
+<p *ngIf="isLoaded">
+    <md-progress-bar mode="indeterminate"></md-progress-bar>
+</p>
+<md-toolbar color="red">
+    Angular 2 <span *ngIf="!isLoaded">{{ nbMessages }} messages</span>
+</md-toolbar>
+<div class="md-padding">
+    <md-list dense>
+        <md-list-item class="md-3-line" *ngFor="let message of messages | async">
+            <img md-list-avatar src="{{ message.avatar }}" alt="{{message.name}}">
+            <h3 md-line> {{message.name}} </h3>
+            <p md-line>
+                <span> {{message.sujet }} </span><br />
+                <span class="message"> {{message.lastMessage}} </span>
+            </p>
+            <!--<ul *ngFor="let dialog of message.dialog">
             <li>
                 <p>{{ dialog.who }} ></p>
                 <p>{{ dialog.message }}</p>
             </li>
         </ul>-->
-    </md-list-item>
-</md-list>
+            <md-divider></md-divider>
+        </md-list-item>
+    </md-list>
+</div>

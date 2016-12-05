@@ -7,15 +7,28 @@ Simple Application for Angular2 with Webpack :
 ![enter image description here](./screens/one.png)
 
 
+### Firebase CLI
+
+[https://firebase.google.com/docs/cli/](https://firebase.google.com/docs/cli/)
+
 
 ### Demo on Firebase
 
 [https://tchat-cabb3.firebaseapp.com/](https://tchat-cabb3.firebaseapp.com/)
 
 
+### Demo on Angular2 Material
+
+[https://justindujardin.github.io/ng2-material/](https://justindujardin.github.io/ng2-material/)
+
+
 ### Demo all Components
 
 [https://justindujardin.github.io/ng2-material/](https://justindujardin.github.io/ng2-material/)
+
+### Quering List/Object
+[https://github.com/angular/angularfire2/blob/master/docs/4-querying-lists.md](https://github.com/angular/angularfire2/blob/master/docs/4-querying-lists.md)
+
 
 
 ### Deploy on Firebase
