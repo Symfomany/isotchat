@@ -76,6 +76,10 @@ Simple Application for Angular2 with Webpack :
 * ng2-ngSwitch
 
 
+### All Angular components
+
+[https://github.com/angular/material2#feature-status](All Material Angular2 Components)
+
 
 ### API Docs
 

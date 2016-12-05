@@ -9,26 +9,27 @@ import { MaterialModule } from '@angular/material';
 import { ActionComponent } from './action/action.component';
 import { MessagesComponent } from './messages/messages.component';
 
-import * as firebase from 'firebase';
-import { AngularFireModule } from 'angularfire2/index';
+import { AngularFireModule } from 'angularfire2';
 import { firebaseConfig } from './../environments/firebase';
+import { SidebarComponent } from './sidebar/sidebar.component';
 
 
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    ActionComponent,
-    MessagesComponent,
-  ],
-  imports: [
-    BrowserModule,
-    MaterialModule.forRoot(),
-    FormsModule,
-    HttpModule,
-    AngularFireModule.initializeApp(firebaseConfig)
-  ],
-  providers: [UsersService],
-  bootstrap: [AppComponent]
+    declarations: [
+        AppComponent,
+        ActionComponent,
+        MessagesComponent,
+        SidebarComponent,
+    ],
+    imports: [
+        BrowserModule,
+        AngularFireModule.initializeApp(firebaseConfig),
+        MaterialModule.forRoot(),
+        FormsModule,
+        HttpModule
+    ],
+    providers: [UsersService],
+    bootstrap: [AppComponent]
 })
 export class AppModule { }

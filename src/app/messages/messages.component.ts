@@ -1,6 +1,5 @@
-import { UsersService } from '../services/UsersService';
 import { Component, OnInit } from '@angular/core';
-import { AngularFire, FirebaseListObservable } from 'angularfire2/index';
+import { AngularFire, FirebaseListObservable } from 'angularfire2';
 
 
 @Component({
@@ -16,7 +15,7 @@ export class MessagesComponent implements OnInit {
    * @type {Array<any>}
    * @memberOf MessagesComponent
    */
-  messages: FirebaseListObservable<any>;
+  messages: FirebaseListObservable<any[]>;
 
 
   /**
@@ -26,8 +25,8 @@ export class MessagesComponent implements OnInit {
    * 
    * @memberOf MessagesComponent
    */
-  constructor(private userService: UsersService, private af: AngularFire) {
-    this.messages = af.database.list('data');
+  constructor(private af: AngularFire) {
+    this.messages = af.database.list('data/Angular2');
     this.messages.subscribe(
       val => console.log(val)
     );
