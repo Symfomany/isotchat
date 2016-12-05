@@ -1,5 +1,9 @@
 <md-toolbar color="primary">
     Application de Tchat
+
+    <!-- This fills the remaining space of the current row -->
+    <span class="example-fill-remaining-space"></span>
+
     <button md-icon-button [md-menu-trigger-for]="menu">
             <md-icon>more_vert</md-icon>
         </button>
@@ -100,45 +104,48 @@
         </md-list>
 
     </md-sidenav>
-    <div class="my-content">
+    <div>
 
-
-        <md-toolbar class="fixed-toolbar" color="warn">
-            Application de Tchat
-        </md-toolbar>
         <div layout="column" layout-fill layout-align="top center">
             <md-tab-group>
                 <md-tab>
                     <template md-tab-label>
-                    <i class="material-icons">chat</i>General
-                 </template>
-                    <h1>General</h1>
-                    <p>Tous les sujets généraux</p>
-                    <app-messages></app-messages>
-
+                        <i class="material-icons">chat</i>
+                    </template>
+                    <div class="md-padding">
+                        <h1>General</h1>
+                        <p>Tous les sujets généraux</p>
+                        <app-messages></app-messages>
+                    </div>
                 </md-tab>
 
                 <md-tab>
                     <template md-tab-label>
-                    <i class="material-icons">notifications</i>Notifications
-                 </template>
-                    <h1>Notifications</h1>
-                    <p>Mes Favoris</p>
+                        <i class="material-icons">notifications</i>
+                    </template>
+                    <div class="md-padding">
+                        <h1>Notifications</h1>
+                        <p>Mes Favoris</p>
+                    </div>
                 </md-tab>
                 <md-tab>
                     <template md-tab-label>
-                    <i class="material-icons">format_quote</i>Favoris
-                 </template>
-                    <h1>Favoris</h1>
-                    <p>Mes Favoris</p>
+                        <i class="material-icons">format_quote</i>
+                    </template>
+                    <div class="md-padding">
+                        <h1>Favoris</h1>
+                        <p>Mes Favoris</p>
+                    </div>
                 </md-tab>
 
                 <md-tab>
                     <template md-tab-label>
-                    <i class="material-icons">settings</i>Configuration
-                 </template>
-                    <h1>Configuration</h1>
-                    <p>Mes settings</p>
+                        <i class="material-icons">settings</i>
+                    </template>
+                    <div class="md-padding">
+                        <h1>Configuration</h1>
+                        <p>Mes settings</p>
+                    </div>
                 </md-tab>
             </md-tab-group>
         </div>

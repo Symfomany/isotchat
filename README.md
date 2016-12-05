@@ -13,6 +13,11 @@ Simple Application for Angular2 with Webpack :
 [https://tchat-cabb3.firebaseapp.com/](https://tchat-cabb3.firebaseapp.com/)
 
 
+### Demo all Components
+
+[https://justindujardin.github.io/ng2-material/](https://justindujardin.github.io/ng2-material/)
+
+
 ### Deploy on Firebase
 
 ```
@@ -52,9 +57,7 @@ Simple Application for Angular2 with Webpack :
 + Map des users pour les messages
 
 
-#### Some Snippets by John Papa
-
-## TypeScript Snippets
+#### Some TypeScript Snippets by John Papa
 
 * ng2-bootstrap       // Angular 2 bootstrapping, for main.ts
 * ng2-component       // Angular 2 component
