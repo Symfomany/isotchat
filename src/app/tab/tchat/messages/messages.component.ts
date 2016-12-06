@@ -30,12 +30,10 @@ export class MessagesComponent implements OnInit {
      */
     constructor(private af: AngularFire) {
         this.messages = af.database.list('data/Angular2');
-        this.nbMessages = this.messages.count();
-        console.log(this.nbMessages);
         this.messages.subscribe(
             val => {
                 this.isLoaded = false;
-                console.log(val)
+                this.nbMessages = val.length;
             }
         );
 

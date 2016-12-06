@@ -1,10 +1,11 @@
 <md-toolbar color="primary">
-    Application de Tchat
+    <img src="http://www.drutas.com/wp-content/uploads/2016/03/chat-icon.png" alt="">
 
     <!-- This fills the remaining space of the current row -->
     <span class="example-fill-remaining-space"></span>
 
-    <button md-raised-button color="warn" type="button" (click)="openDialog()"><i class="material-icons">account_circle</i> Se connecter</button>
+    <button md-button md-no-ink type="button"><i class="material-icons">add_alert</i> Les dernieres actus</button>
+    <button md-button md-no-ink type="button" (click)="openDialog()"><i class="material-icons">account_circle</i> Se connecter</button>
     <button md-icon-button [md-menu-trigger-for]="menu">
             <md-icon>more_vert</md-icon>
         </button>

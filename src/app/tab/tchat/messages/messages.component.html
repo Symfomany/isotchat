@@ -2,9 +2,12 @@
     <md-progress-bar mode="indeterminate"></md-progress-bar>
 </p>
 <md-toolbar color="red">
-    Angular 2 <span *ngIf="!isLoaded">{{ nbMessages }} messages</span>
+    <h3>Angular 2</h3>
+    <div class="example-fill-remaining-space"></div>
+    <span class="textRight" *ngIf="!isLoaded">{{ nbMessages }} messages</span>
 </md-toolbar>
 <div class="md-padding">
+    <a style="flex: 1 1 auto;display: block;" md-button>Voir plus de messages</a>
     <md-list dense>
         <md-list-item class="md-3-line" *ngFor="let message of messages | async">
             <img md-list-avatar src="{{ message.avatar }}" alt="{{message.name}}">
