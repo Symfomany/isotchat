@@ -7,14 +7,18 @@
     <span class="textRight" *ngIf="!isLoaded">{{ nbMessages }} messages</span>
 </md-toolbar>
 <div class="md-padding">
-    <a style="flex: 1 1 auto;display: block;" md-button>Voir plus de messages</a>
-    <md-list dense>
+    <a style="flex: 1 1 auto;display: block;" md-button>
+        <i class="material-icons">more_horiz</i> Voir plus de messages</a>
+    <md-list id="messagesList" dense style="height: 500px;overflow: auto;">
         <md-list-item class="md-3-line" *ngFor="let message of messages | async">
             <img md-list-avatar src="{{ message.avatar }}" alt="{{message.name}}">
-            <h3 md-line> {{message.name}} </h3>
+            <h3 md-line> {{message.name}}
+                <i style="font-size: 15px" class="material-icons">star_border</i>
+                <span>{{ message.created * 1000 | date }}</span>
+                <a (click)="removeMessage(message)"><i style="float:right;color: red" class="material-icons">delete</i></a>
+            </h3>
             <p md-line>
-                <span> {{message.sujet }} </span><br />
-                <span class="message"> {{message.lastMessage}} </span>
+                <span class="message" [innerHTML]="message.lastMessage | message"></span>
             </p>
             <!--<ul *ngFor="let dialog of message.dialog">
             <li>

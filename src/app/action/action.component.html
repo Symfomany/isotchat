@@ -1,11 +1,15 @@
-<form>
+<md-card>
+    <md-card-title><i class="material-icons">comment</i> Reagissez!</md-card-title>
+    <md-card-content>
+        <form (ngSubmit)="onSubmit()" name="add">
+            <md-textarea [(ngModel)]="message" name="message" required placeholder="Ecrivez votre bonne ressource à partager" maxlength="500" class="demo-full-width" #characterCountHintExample>
+                <md-hint align="end">{{characterCountHintExample.characterCount}} / 500</md-hint>
+            </md-textarea>
 
+            <button md-raised-button color="primary"><i class="material-icons">create</i> Ecrire un message</button>
+        </form>
 
-    <md-input placeholder="Ecrivez votre bonne ressource à partager" maxlength="500" class="demo-full-width" #characterCountHintExample>
-        <md-hint align="end">{{characterCountHintExample.characterCount}} / 500</md-hint>
-    </md-input>
+        <!--<md-slide-toggle>Afficher que mes sujets préférés</md-slide-toggle>-->
 
-    <button md-raised-button color="primary"><i class="material-icons">chat</i> Ecrire un message</button>
-
-    <!--<md-slide-toggle>Afficher que mes sujets préférés</md-slide-toggle>-->
-</form>
+    </md-card-content>
+</md-card>

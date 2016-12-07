@@ -2,8 +2,24 @@ md-input-element {
     height: 100px;
 }
 
-md-input {
-    display: block;
+md-input,
+md-textarea {
+    width: 100%;
     padding: 5px;
-    margin: 5px;
+    height: 100px;
+}
+
+md-textarea textarea {
+    padding: 5px;
+    height: 70px;
+}
+
+[md-raised-button].md-primary,
+[md-fab].md-primary,
+[md-mini-fab].md-primary {
+    float: right;
+}
+
+.md-input-element {
+    height: 65px;
 }

@@ -21,6 +21,7 @@ import { FavoriteComponent } from './tab/favorite/favorite.component';
 import { SettingComponent } from './tab/setting/setting.component';
 import { RightmenuComponent } from './rightmenu/rightmenu.component';
 import { AuthentificationDialog } from './authentification/authentification.component';
+import { MessagePipe } from './message-pipe.pipe';
 
 
 
@@ -40,6 +41,7 @@ import { AuthentificationDialog } from './authentification/authentification.comp
         FavoriteComponent,
         SettingComponent,
         RightmenuComponent,
+        MessagePipe,
     ],
     entryComponents: [
         AuthentificationDialog
