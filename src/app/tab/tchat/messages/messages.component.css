@@ -6,23 +6,8 @@
     flex: 1 1 auto;
 }
 
-.textRight {
-    font-size: 11px;
-}
 
-md-list md-list-item h3[md-line],
-md-nav-list md-list-item h3[md-line] {
-    font-size: 15px;
-    font-weight: bold;
-}
 
-md-list md-list-item h3[md-line] span,
-md-nav-list md-list-item h3[md-line] span {
-    font-size: 10px;
-    font-weight: 300;
-    color: gray;
-    float: right;
-}
 
 md-list md-list-item.md-2-line .md-list-item,
 md-list a[md-list-item].md-2-line .md-list-item,
@@ -31,12 +16,7 @@ md-nav-list a[md-list-item].md-2-line .md-list-item {
     margin: 10px;
 }
 
-md-list[dense] md-list-item [md-line],
-md-list[dense] a[md-list-item] [md-line],
-md-nav-list[dense] md-list-item [md-line],
-md-nav-list[dense] a[md-list-item] [md-line] {
-    white-space: normal;
-}
+
 
 md-list md-list-item,
 md-list a[md-list-item],
@@ -45,3 +25,4 @@ md-nav-list a[md-list-item] {
     height: 100%;
     margin-bottom: 15px;
 }
+

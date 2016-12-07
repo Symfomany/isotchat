@@ -1,18 +1,21 @@
 <md-toolbar color="primary">
-    <img src="http://www.drutas.com/wp-content/uploads/2016/03/chat-icon.png" alt="">
+    IsoTchat
 
     <!-- This fills the remaining space of the current row -->
     <span class="example-fill-remaining-space"></span>
 
-    <button md-button md-no-ink type="button"><i class="material-icons">add_alert</i> Les dernieres actus</button>
+    <!--<button md-button md-no-ink type="button"><i class="material-icons">add_alert</i> Les dernieres actus</button>
     <button md-button md-no-ink type="button" (click)="openDialog()"><i class="material-icons">account_circle</i> Se connecter</button>
+   -->
+    <button md-icon-button>
+            <md-icon>search</md-icon>
+        </button>
     <button md-icon-button [md-menu-trigger-for]="menu">
             <md-icon>more_vert</md-icon>
         </button>
-    <md-menu #menu="mdMenu">
-        <button md-menu-item> Refresh </button>
-        <button md-menu-item> Settings </button>
-        <button md-menu-item> Help </button>
-        <button md-menu-item disabled> Sign Out </button>
+    <md-menu #menu="mdMenu" x-position="before">
+        <button md-menu-item><i class="material-icons">supervisor_account</i> Connectés </button>
+        <button md-menu-item><i class="material-icons">flash_on</i> Connexion </button>
+        <button md-menu-item><i class="material-icons">settings</i> Settings </button>
     </md-menu>
 </md-toolbar>

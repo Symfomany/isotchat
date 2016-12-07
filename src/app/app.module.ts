@@ -3,6 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
+import { Autosize } from 'angular2-autosize/angular2-autosize';
 
 import { AppComponent } from './app.component';
 import { MaterialModule } from '@angular/material';
@@ -42,6 +43,7 @@ import { MessagePipe } from './message-pipe.pipe';
         SettingComponent,
         RightmenuComponent,
         MessagePipe,
+        Autosize
     ],
     entryComponents: [
         AuthentificationDialog

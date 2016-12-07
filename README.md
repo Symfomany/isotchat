@@ -32,6 +32,13 @@ Simple Application for Angular2 with Webpack :
 
 [https://justindujardin.github.io/ng2-material/](https://justindujardin.github.io/ng2-material/)
 
+
+
+### Demo on Material Design Interfce
+
+[http://codepen.io/anon/pen/KNRBRy](http://codepen.io/anon/pen/KNRBRy)
+
+
 ### Quering List/Object
 [https://github.com/angular/angularfire2/blob/master/docs/4-querying-lists.md](https://github.com/angular/angularfire2/blob/master/docs/4-querying-lists.md)
 

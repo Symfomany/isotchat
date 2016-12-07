@@ -7,7 +7,7 @@ declare var $: any;
 @Component({
     selector: 'app-messages',
     templateUrl: './messages.component.html',
-    styleUrls: ['./messages.component.css']
+    styleUrls: ['./messages.component.css', './messages.component.scss']
 })
 export class MessagesComponent implements OnInit {
 
@@ -35,6 +35,11 @@ export class MessagesComponent implements OnInit {
                 orderByChild: 'created'
             }
         });
+
+        Hammer(listContainer).on('drag', function (e) {
+
+        });
+
         this.messages.subscribe(
             val => {
                 this.isLoaded = false;
