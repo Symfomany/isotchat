@@ -5,24 +5,3 @@
 .example-fill-remaining-space {
     flex: 1 1 auto;
 }
-
-
-
-
-md-list md-list-item.md-2-line .md-list-item,
-md-list a[md-list-item].md-2-line .md-list-item,
-md-nav-list md-list-item.md-2-line .md-list-item,
-md-nav-list a[md-list-item].md-2-line .md-list-item {
-    margin: 10px;
-}
-
-
-
-md-list md-list-item,
-md-list a[md-list-item],
-md-nav-list md-list-item,
-md-nav-list a[md-list-item] {
-    height: 100%;
-    margin-bottom: 15px;
-}
-

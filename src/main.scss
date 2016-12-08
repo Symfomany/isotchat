@@ -1,69 +1,89 @@
-div.md-tab-label{
+#messagesList .md-list-item {
+    display: flex;
+    height: 65px;
+    position: relative;
+    left: 0px;
+}
+
+.md-tab-label {
+    line-height: 61px !important;
+}
+
+#messagesList .md-list-item.remove {
+    opacity: 0;
+}
+
+div.md-tab-label {
     width: 100%;
 }
-.md-tab-body-wrapper[_ngcontent-pel-17]{
+
+.md-tab-body-wrapper[_ngcontent-pel-17] {
     background-color: #eee;
 }
+
 .example-fill-remaining-space {
     flex: 1 1 auto;
 }
-button#send{
-  margin-top: 10px;
-  width: 100%;
-  transition: all 0.3s ease-in-out;
 
-  box-shadow: 0 3px 6px 0 rgba(0,0,0,0.2);
-    &:hover { 
-    transform: translateY(-3px);
-    box-shadow: 0 6px 6px 0 rgba(0,0,0,0.2);
-  }
+button#send {
+    margin-top: 10px;
+    width: 100%;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.2);
+    &:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 6px 6px 0 rgba(0, 0, 0, 0.2);
+    }
 }
 
-#addMessage{
-  position: fixed;
-  width: 291px;
-  height: 145px;
+#addMessage {
+    position: fixed;
+    width: 291px;
+    height: 145px;
 }
-#addMessage textarea{
-  height: 80px;
-  font-size: 1rem;
-  font-family: Roboto;
-  display: block;
-	width: 100%;
-	border: 0;
-	padding: 10px 5px;
-  background: white no-repeat;
-	/*
+
+#addMessage textarea {
+    height: 80px;
+    font-size: 1rem;
+    font-family: Roboto;
+    display: block;
+    width: 100%;
+    border: 0;
+    padding: 10px 5px;
+    background: white no-repeat;
+    /*
 	* IMPORTANT PART HERE
 	*/
-  /* 2 imgs : 1px gray line (normal state) AND 2px green line (focus state) */
-	background-image: linear-gradient(to bottom, #1abc9c, #1abc9c), linear-gradient(to bottom, silver, silver);
-	/* sizes for the 2 images (default state) */
-	background-size: 0 2px, 100% 1px;
-	/* positions for the 2 images. Change both "50%" to "0%" or "100%" and tri again */
-	background-position: 50% 100%, 50% 100%;
-
-	/* animation solely on background-size */
-  transition: background-size 0.3s cubic-bezier(0.64, 0.09, 0.08, 1);
+    /* 2 imgs : 1px gray line (normal state) AND 2px green line (focus state) */
+    background-image: linear-gradient(to bottom, #1abc9c, #1abc9c), linear-gradient(to bottom, silver, silver);
+    /* sizes for the 2 images (default state) */
+    background-size: 0 2px, 100% 1px;
+    /* positions for the 2 images. Change both "50%" to "0%" or "100%" and tri again */
+    background-position: 50% 100%, 50% 100%;
+    /* animation solely on background-size */
+    transition: background-size 0.3s cubic-bezier(0.64, 0.09, 0.08, 1);
 }
 
-#addMessage textarea:focus{
-  /* sizes for the 2 images (focus state) */
-	background-size: 100% 2px, 100% 1px;
-	outline: none;
+#addMessage textarea:focus {
+    /* sizes for the 2 images (focus state) */
+    background-size: 100% 2px, 100% 1px;
+    outline: none;
 }
 
-.textRight{
-    float:right;
-        font-size: 0.7rem;
+.textRight {
+    float: right;
+    font-size: 0.7rem;
     font-weight: normal;
 }
 
-app-messages{
+app-messages {
     background-color: #eee;
 }
 
-md-list[dense] md-list-item [md-line]:nth-child(n+2), md-list[dense] a[md-list-item] [md-line]:nth-child(n+2), md-nav-list[dense] md-list-item [md-line]:nth-child(n+2), md-nav-list[dense] a[md-list-item] [md-line]:nth-child(n+2) {
+md-list[dense] md-list-item [md-line]:nth-child(n+2),
+md-list[dense] a[md-list-item] [md-line]:nth-child(n+2),
+md-nav-list[dense] md-list-item [md-line]:nth-child(n+2),
+md-nav-list[dense] a[md-list-item] [md-line]:nth-child(n+2) {
     font-size: 0.9rem !important;
 }
 
@@ -72,8 +92,9 @@ md-nav-list md-list-item h3[md-line] {
     font-size: 1.0rem !important;
     font-weight: 300 !important;
 }
+
 md-list md-list-item h3[md-line] span,
-md-nav-list md-list-item h3[md-line] span{
+md-nav-list md-list-item h3[md-line] span {
     font-size: 0.8rem !important;
     color: #666;
 }
@@ -86,15 +107,16 @@ CORE STYLES (ported over for demo)
 */
 
 @function rem($multiplier) {
-  $font-size: 10px;
-  @return $multiplier * $font-size;
+    $font-size: 10px;
+    @return $multiplier * $font-size;
 }
 
 $md-shadow-bottom-z-1: 0 2px 5px 0 rgba(0, 0, 0, 0.26) !default;
 $md-shadow-bottom-z-2: 0 4px 8px 0 rgba(0, 0, 0, 0.4) !default;
-
 $md-body-font-size-base: 14px !default;
-$font-family: Roboto, 'Helvetica Neue', sans-serif !default;
+$font-family: Roboto,
+'Helvetica Neue',
+sans-serif !default;
 $md-mobile-screen: 600px;
 
 /*
@@ -107,192 +129,197 @@ $md-card-default-padding: rem(2.400) !default;
 $md-card-mobile-padding: rem(2.400) rem(1.600) !default;
 $md-card-border-radius: 2px !default;
 $md-card-header-size: rem(4.000) !default;
-
 md-card {
-  display: block;
-  position:relative;
-  padding: $md-card-default-padding;
-  border-radius: $md-card-border-radius;
-  box-shadow: $md-shadow-bottom-z-1;
-  font-family: $font-family;
-  background: white;      // to be replaced with theming
-  height: 800px;
-  margin: 1rem;
-  position: relative;
+    display: block;
+    position: relative;
+    padding: $md-card-default-padding;
+    border-radius: $md-card-border-radius;
+    box-shadow: $md-shadow-bottom-z-1;
+    font-family: $font-family;
+    background: white; // to be replaced with theming
+    height: 800px;
+    margin: 1rem;
+    position: relative;
 }
 
 %md_card_title_base {
-  display: block;
-  margin-bottom: rem(1.600);  
+    display: block;
+    margin-bottom: rem(1.600);
 }
 
 md-card-title {
-  @extend %md_card_title_base;
-  font-size: rem(2.400);
-  font-weight: 400;
+    @extend %md_card_title_base;
+    font-size: rem(2.400);
+    font-weight: 400;
 }
 
 md-card-subtitle {
-  @extend %md_card_title_base;
-  font-size: $md-body-font-size-base;
-  color: rgba(0,0,0,0.54);    //to be replaced with theming
+    @extend %md_card_title_base;
+    font-size: $md-body-font-size-base;
+    color: rgba(0, 0, 0, 0.54); //to be replaced with theming
 }
 
 md-card-content {
-  display: block;
-  font-size: $md-body-font-size-base;
-  margin-bottom: rem(1.600);
+    display: block;
+    font-size: $md-body-font-size-base;
+    margin-bottom: rem(1.600);
 }
 
 md-card-actions {
-  display: block;
-  margin: rem(1.600) rem(-1.600);
-  padding: rem(0.800) 0;
+    display: block;
+    margin: rem(1.600) rem(-1.600);
+    padding: rem(0.800) 0;
 }
 
 md-card-actions {
-  [md-button], [md-raised-button], button {
-    margin: 0 rem(0.400);
-  } 
+    [md-button],
+    [md-raised-button],
+    button {
+        margin: 0 rem(0.400);
+    }
 }
 
 img[md-card-image] {
-  width: calc(100% + 48px);
-  margin: 0 rem(-2.400) rem(1.600) rem(-2.400);
+    width: calc(100% + 48px);
+    margin: 0 rem(-2.400) rem(1.600) rem(-2.400);
 }
 
 img[md-card-xl-image] {
-  width: rem(24.00);
-  height: rem(24.00);
-  margin: rem(-0.800);
+    width: rem(24.00);
+    height: rem(24.00);
+    margin: rem(-0.800);
 }
 
 md-card-footer {
-  position: absolute;
-  bottom: 0;
+    position: absolute;
+    bottom: 0;
 }
+
 
 /* HEADER STYLES */
 
 md-card-header {
-  display: flex;
-  flex-direction: row;
-  height: $md-card-header-size;
-  margin: rem(-0.800) 0 rem(1.600) 0;
+    display: flex;
+    flex-direction: row;
+    height: $md-card-header-size;
+    margin: rem(-0.800) 0 rem(1.600) 0;
 }
 
 .md-card-header-text {
-  height: $md-card-header-size;
-  margin: 0 rem(0.800);
+    height: $md-card-header-size;
+    margin: 0 rem(0.800);
 }
 
 img[md-card-avatar] {
-  height: $md-card-header-size;
-  width: $md-card-header-size;
-  border-radius: 50%;
+    height: $md-card-header-size;
+    width: $md-card-header-size;
+    border-radius: 50%;
 }
 
 md-card-header md-card-title {
-  font-size: $md-body-font-size-base;
+    font-size: $md-body-font-size-base;
 }
 
 md-card-header md-card-subtitle:not(:first-child) {
-  margin-top: rem(-0.800);
+    margin-top: rem(-0.800);
 }
+
 
 /* TITLE-GROUP STYLES */
 
 %md_card_title_img {
-  margin: rem(-0.800) 0;
+    margin: rem(-0.800) 0;
 }
 
 md-card-title-group {
-  display: flex;
-  justify-content: space-between;
-  margin: 0 rem(-0.800);
+    display: flex;
+    justify-content: space-between;
+    margin: 0 rem(-0.800);
 }
 
 img[md-card-sm-image] {
-  @extend %md_card_title_img;
-  width: rem(8.00);
-  height: rem(8.00);
+    @extend %md_card_title_img;
+    width: rem(8.00);
+    height: rem(8.00);
 }
 
 img[md-card-md-image] {
-  @extend %md_card_title_img;
-  width: rem(11.200);
-  height: rem(11.200);
+    @extend %md_card_title_img;
+    width: rem(11.200);
+    height: rem(11.200);
 }
 
 img[md-card-lg-image] {
-  @extend %md_card_title_img;
-  width: rem(15.200);
-  height: rem(15.200);
+    @extend %md_card_title_img;
+    width: rem(15.200);
+    height: rem(15.200);
 }
+
 
 /* MEDIA QUERIES */
 
-@media (max-width: $md-mobile-screen){
-  md-card {
-    padding: $md-card-mobile-padding;
-  }
-
-  img[md-card-image] {
-    width: calc(100% + 32px);
-    margin: rem(1.600) rem(-1.600);
-  }
-
-  md-card-title-group {
-    margin: 0;
-  }
-
-  img[md-card-xl-image] {
-    margin-left: 0;
-    margin-right: 0;
-  }
-
+@media (max-width: $md-mobile-screen) {
+    md-card {
+        padding: $md-card-mobile-padding;
+    }
+    img[md-card-image] {
+        width: calc(100% + 32px);
+        margin: rem(1.600) rem(-1.600);
+    }
+    md-card-title-group {
+        margin: 0;
+    }
+    img[md-card-xl-image] {
+        margin-left: 0;
+        margin-right: 0;
+    }
 }
+
 
 /* FIRST/LAST CHILD ADJUSTMENTS */
 
-md-card-title:not(:first-child), md-card-subtitle:not(:first-child) {
-  margin-top: rem(-0.400);
+md-card-title:not(:first-child),
+md-card-subtitle:not(:first-child) {
+    margin-top: rem(-0.400);
 }
 
 img[md-card-image]:first-child {
-  margin-top: rem(-2.400);
+    margin-top: rem(-2.400);
 }
 
 md-card-content:first-child {
-  margin: 0;
-  padding-top: 0;
+    margin: 0;
+    padding-top: 0;
 }
 
-md-card-content > *:first-child {
-  margin-top: 0;
+md-card-content>*:first-child {
+    margin-top: 0;
 }
 
-.md-card > img[md-card-xl-image]:first-child{
-  margin-top: rem(-0.800);
+.md-card>img[md-card-xl-image]:first-child {
+    margin-top: rem(-0.800);
 }
 
-.md-card > img[md-card-xl-image]:last-child {
-  margin-bottom: rem(-0.800);
+.md-card>img[md-card-xl-image]:last-child {
+    margin-bottom: rem(-0.800);
 }
 
-.md-card > *:last-child, md-card-content > *:last-child {
-  margin-bottom: 0;
+.md-card>*:last-child,
+md-card-content>*:last-child {
+    margin-bottom: 0;
 }
 
-.md-card > md-card-actions:last-child {
-  margin-bottom: rem(-1.600);
-  padding-bottom: 0;
+.md-card>md-card-actions:last-child {
+    margin-bottom: rem(-1.600);
+    padding-bottom: 0;
 }
 
 md-card-actions [md-button]:first-child,
 md-card-actions [md-raised-button]:first-child {
-  margin: 0;
+    margin: 0;
 }
+
+
 /*
 Copyright 2016 Google Inc. All Rights Reserved.
 Use of this source code is governed by an MIT-style license that

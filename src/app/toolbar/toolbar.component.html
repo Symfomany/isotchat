@@ -1,21 +1,81 @@
 <md-toolbar color="primary">
-    IsoTchat
 
+    <button md-icon-button (click)="start.toggle()">
+            <i class="material-icons">search</i>
+        </button>
     <!-- This fills the remaining space of the current row -->
     <span class="example-fill-remaining-space"></span>
 
     <!--<button md-button md-no-ink type="button"><i class="material-icons">add_alert</i> Les dernieres actus</button>
     <button md-button md-no-ink type="button" (click)="openDialog()"><i class="material-icons">account_circle</i> Se connecter</button>
    -->
-    <button md-icon-button>
-            <md-icon>search</md-icon>
+
+
+    <button md-icon-button (click)="start.toggle()">
+            <i class="material-icons">menu</i>
         </button>
-    <button md-icon-button [md-menu-trigger-for]="menu">
-            <md-icon>more_vert</md-icon>
-        </button>
+
     <md-menu #menu="mdMenu" x-position="before">
         <button md-menu-item><i class="material-icons">supervisor_account</i> Connectés </button>
         <button md-menu-item><i class="material-icons">flash_on</i> Connexion </button>
         <button md-menu-item><i class="material-icons">settings</i> Settings </button>
     </md-menu>
 </md-toolbar>
+
+
+<md-sidenav #start mode="side" opened="false">
+    <md-nav-list>
+        <a (click)="go('angular')" md-list-item>
+            <img md-list-avatar src="https://johnpapa.gallerycdn.vsassets.io/extensions/johnpapa/angular2/1.0.2/1475237564342/Microsoft.VisualStudio.Services.Icons.Default" alt="...">
+            <h3 md-line> Angular2 </h3>
+            <p md-line>
+                <span> Nouveautés, Cours, Videos </span>
+            </p>
+        </a>
+        <a (click)="go('react')" md-list-item>
+            <img md-list-avatar src="http://blog.xebia.fr/wp-content/uploads/2015/02/react-logo-1000-transparent-128x128.png" alt="...">
+            <h3 md-line> ReactJS </h3>
+            <p md-line>
+                <span> Nouveautés, Cours, Videos </span>
+            </p>
+        </a>
+        <a (click)="go('rxjs')" md-list-item>
+            <img md-list-avatar src="http://www.dnnsoftware.com/Portals/0/Users/206/86/398286/Reactive%20Extensions%20Logo.png" alt="...">
+            <h3 md-line> RxJS </h3>
+            <p md-line>
+                <span> Nouveautés, Cours, Videos </span>
+            </p>
+        </a>
+        <a (click)="go('vuejs')" md-list-item>
+            <img md-list-avatar src="https://avatars-05.gitter.im/group/iv/3/57542d72c43b8c601977cdd3" alt="...">
+            <h3 md-line> VueJS </h3>
+            <p md-line>
+                <span> Nouveautés, Cours, Videos </span>
+            </p>
+        </a>
+        <a (click)="go('laravel')" md-list-item>
+            <img md-list-avatar src="http://www.typescriptlang.org/assets/images/icons/nuget-icon-128x128.png" alt="...">
+            <h3 md-line> Laravel </h3>
+            <p md-line>
+                <span> Nouveautés, Cours, Videos </span>
+            </p>
+        </a>
+        <a (click)="go('laravel')" md-list-item>
+            <img md-list-avatar src="https://dynamicimagesfr-v2b.netdna-ssl.com/product_class_external_product/laravel_128.png" alt="...">
+            <h3 md-line> Laravel </h3>
+            <p md-line>
+                <span> Nouveautés, Cours, Videos </span>
+            </p>
+        </a>
+        <a (click)="go('symfony')" md-list-item>
+            <img md-list-avatar src="https://dynamicimagesfr-v2b.netdna-ssl.com/product_class_external_product/symfony_128x128.png" alt="...">
+            <h3 md-line> Symfony </h3>
+            <p md-line>
+                <span> Nouveautés, Cours, Videos </span>
+            </p>
+        </a>
+    </md-nav-list>
+
+
+
+</md-sidenav>

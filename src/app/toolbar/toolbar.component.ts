@@ -1,4 +1,5 @@
-import { MdDialog, MdDialogRef } from '@angular/material';
+import {ViewChild} from '@angular/core/src/metadata/di';
+import {MdDialog, MdDialogRef, MdSidenav} from '@angular/material';
 import { AuthentificationDialog } from '../authentification/authentification.component';
 import { Component, OnInit } from '@angular/core';
 
@@ -10,6 +11,7 @@ import { Component, OnInit } from '@angular/core';
 export class ToolbarComponent implements OnInit {
 
   dialogRef: MdDialogRef<AuthentificationDialog>;
+  @ViewChild('start') start:MdSidenav;
 
   constructor(public dialog: MdDialog) { }
   openDialog() {
@@ -21,6 +23,11 @@ export class ToolbarComponent implements OnInit {
       console.log('result: ' + result);
       this.dialogRef = null;
     });
+  }
+
+  go(tech:any){
+    console.log(tech);
+    this.start.close();
   }
 
 

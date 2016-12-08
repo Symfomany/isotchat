@@ -1,5 +1,4 @@
-import { ClassGetter } from '@angular/compiler/src/output/output_ast';
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, style, animate, transition, trigger } from '@angular/core';
 import { AngularFire, FirebaseListObservable } from 'angularfire2';
 
 declare var $: any;
@@ -7,7 +6,18 @@ declare var $: any;
 @Component({
     selector: 'app-messages',
     templateUrl: './messages.component.html',
-    styleUrls: ['./messages.component.css', './messages.component.scss']
+    animations: [
+        trigger('fadeInOut', [
+            transition(':enter', [   // :enter is alias to 'void => *'
+                style({ opacity: 0 }),
+                animate(500, style({ opacity: 1 }))
+            ]),
+            transition(':leave', [   // :leave is alias to '* => void'
+                animate(500, style({ opacity: 0 }))
+            ])
+        ])
+    ],
+    styleUrls: ['./messages.component.css']
 })
 export class MessagesComponent implements OnInit {
 
@@ -22,6 +32,9 @@ export class MessagesComponent implements OnInit {
     public isLoaded = true;
 
     public nbMessages: any = 0;
+
+    swipeDirection: string = '-';
+
     /**
      * Creates an instance of MessagesComponent.
      * 
@@ -36,9 +49,14 @@ export class MessagesComponent implements OnInit {
             }
         });
 
-        Hammer(listContainer).on('drag', function (e) {
 
-        });
+
+        // hammertime.on('pan', function (ev) {
+        //     console.log(ev);
+        // });
+
+        // $(' div')
+
 
         this.messages.subscribe(
             val => {
@@ -69,5 +87,33 @@ export class MessagesComponent implements OnInit {
         // this.userService.getAll().subscribe(
         //   messages => this.messages = messages)
     }
+
+
+    swipeRight(message: any, event: any): void {
+
+        if (!$(event.target).hasClass(".md-list-item")) {
+            $(event.target).parents('.md-list-item').animate({
+                left: "+=50",
+                opacity: "0",
+            }, 500, () => {
+                $(event.target).parents('.md-list-item').hide();
+                const items = this.af.database.list('/data/Angular2');
+                items.remove(message);
+            });
+        } else {
+            $(event.target).animate({
+                left: "+=50",
+                opacity: "0",
+            }, 1200, () => {
+                $(event.target).hide();
+                const items = this.af.database.list('/data/Angular2');
+                items.remove(message);
+            });
+        }
+
+    }
+
+
+
 
 }
