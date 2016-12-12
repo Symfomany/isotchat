@@ -75,9 +75,9 @@ export class MessagesComponent implements OnInit {
         items.remove(message);
     }
 
-    more(){
+    more() {
         this.compteur += 10;
-         this.messages = this.af.database.list('data/Angular2', {
+        this.messages = this.af.database.list('data/Angular2', {
             query: {
                 orderByChild: 'created',
                 limitToLast: this.compteur,

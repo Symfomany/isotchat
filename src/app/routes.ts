@@ -6,7 +6,7 @@ import { NotificationsComponent } from './tab/notifications/notifications.compon
 
 export const appRoutes: Routes = [
     { path: '', component: TchatComponent },
-    { path: 'home', component: TchatComponent },
+    { path: 'home/:action', component: TchatComponent },
     { path: 'notifications', component: NotificationsComponent },
     { path: 'account', component: AccountComponent },
 ];

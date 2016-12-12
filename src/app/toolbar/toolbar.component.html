@@ -13,14 +13,13 @@
 
     <button md-icon-button (click)="start.toggle()">
             <i class="material-icons">menu</i>
-        </button>
-    <button md-icon-button (click)="start.toggle()">
+    </button>
+    <button md-icon-button [md-menu-trigger-for]="menu">
             <i class="material-icons">more_vert</i>
-        </button>
+    </button>
 
     <md-menu #menu="mdMenu" x-position="before">
-        <button md-menu-item><i class="material-icons">supervisor_account</i> Connectés </button>
-        <button md-menu-item><i class="material-icons">flash_on</i> Connexion </button>
+        <button (click)="openDialog()" md-menu-item><i class="material-icons" >flash_on</i> Connexion </button>
         <button md-menu-item><i class="material-icons">settings</i> Settings </button>
     </md-menu>
 </md-toolbar>
