@@ -1,6 +1,5 @@
 import { Component, OnInit, style, animate, transition, trigger } from '@angular/core';
 import { AngularFire, FirebaseListObservable } from 'angularfire2';
-
 declare var $: any;
 
 @Component({
@@ -33,6 +32,8 @@ export class MessagesComponent implements OnInit {
 
     public nbMessages: any = 0;
 
+    public compteur: number = 10;
+
     swipeDirection: string = '-';
 
     /**
@@ -45,28 +46,19 @@ export class MessagesComponent implements OnInit {
     constructor(private af: AngularFire) {
         this.messages = af.database.list('data/Angular2', {
             query: {
-                orderByChild: 'created'
+                orderByChild: 'created',
+                limitToLast: this.compteur,
             }
         });
-
-
-
-        // hammertime.on('pan', function (ev) {
-        //     console.log(ev);
-        // });
-
-        // $(' div')
 
 
         this.messages.subscribe(
             val => {
                 this.isLoaded = false;
                 this.nbMessages = val.length;
-                // var objDiv = document.getElementById("messagesList");
-                // objDiv.scrollTop = objDiv.scrollHeight;
-                $('#messagesList').stop().animate({
-                    scrollTop: $('#messagesList')[0].scrollHeight
-                }, 800);
+                var objDiv = document.getElementById("messagesList");
+                objDiv.scrollTop = objDiv.scrollHeight;
+
             }
         );
 
@@ -83,9 +75,22 @@ export class MessagesComponent implements OnInit {
         items.remove(message);
     }
 
+    more() {
+        this.compteur += 10;
+        this.messages = this.af.database.list('data/Angular2', {
+            query: {
+                orderByChild: 'created',
+                limitToLast: this.compteur,
+            }
+        });
+    }
+
     ngOnInit() {
         // this.userService.getAll().subscribe(
         //   messages => this.messages = messages)
+        $('#messagesList').stop().animate({
+            scrollTop: $('#messagesList')[0].scrollHeight
+        }, 800);
     }
 
 

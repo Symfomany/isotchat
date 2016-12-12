@@ -1,26 +1,30 @@
 <div layout="column">
-    <md-tab-group>
+    <md-tab-group (focusChange)="changeTab($event)">
+
         <md-tab class="full-size">
             <template md-tab-label>
                 <a routerLink="/"><i class="material-icons">chat</i></a>
             </template>
-            <app-tchat></app-tchat>
         </md-tab>
+
         <md-tab class="full-size">
             <template md-tab-label>
-                <i class="material-icons">notifications</i>
+                <i class="material-icons">add_alert</i>
             </template>
-            <app-notifications></app-notifications>
         </md-tab>
+
         <md-tab class="full-size">
-            <a routerLink="/account">
-                <template md-tab-label>
-                    <i class="material-icons">account_circle</i>
-                </template>
-            </a>
-            <app-setting></app-setting>
+
+            <template md-tab-label>
+                <i class="material-icons">account_circle</i>
+            </template>
         </md-tab>
-
-
     </md-tab-group>
 </div>
+
+<router-outlet></router-outlet>
+
+<!--<ul>
+    <li><i class="material-icons">chat</i></li>
+    <li><i class="material-icons">account_circle</i></li>
+</ul>-->

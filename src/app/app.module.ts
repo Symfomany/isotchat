@@ -26,14 +26,14 @@ import { AuthentificationDialog } from './authentification/authentification.comp
 import { MessagePipe } from './message-pipe.pipe';
 
 import { RouterModule, Routes } from '@angular/router';
-import { AccountComponent } from './account/account.component';
-import { NotfoundComponent } from './notfound/notfound.component';
+import { AccountComponent } from './tab/account/account.component';
+import { appRoutes } from './routes';
 
 
 
 const appRoutes: Routes = [
-  { path: '', component: TabComponent },
-  { path: 'account', component: AccountComponent  }
+    { path: '', component: TabComponent },
+    { path: 'account', component: AccountComponent }
 ];
 
 
@@ -54,8 +54,7 @@ const appRoutes: Routes = [
         RightmenuComponent,
         MessagePipe,
         Autosize,
-        AccountComponent,
-        NotfoundComponent
+        AccountComponent
     ],
     entryComponents: [
         AuthentificationDialog

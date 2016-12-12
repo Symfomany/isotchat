@@ -61,6 +61,7 @@ Simple Application for Angular2 with Webpack :
 * Server Side Render https://github.com/vladotesanovic/angular2-express-slim
 * Build basic Angular App with Webpack & HMR
 * Theme Material Design & Angular Design
+* Router Logs
 * VSCode settings
 * TSLint & TSDoc
 * Sass support

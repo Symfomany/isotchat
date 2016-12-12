@@ -14,6 +14,11 @@ export class ToolbarComponent implements OnInit {
   @ViewChild('start') start:MdSidenav;
 
   constructor(public dialog: MdDialog) { }
+
+  /**
+   * Open Dialog
+   * @memberOf ToolbarComponent
+   */
   openDialog() {
     this.dialogRef = this.dialog.open(AuthentificationDialog, {
       disableClose: false
@@ -24,6 +29,8 @@ export class ToolbarComponent implements OnInit {
       this.dialogRef = null;
     });
   }
+
+ 
 
   go(tech:any){
     console.log(tech);
