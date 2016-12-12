@@ -25,7 +25,16 @@ import { RightmenuComponent } from './rightmenu/rightmenu.component';
 import { AuthentificationDialog } from './authentification/authentification.component';
 import { MessagePipe } from './message-pipe.pipe';
 
+import { RouterModule, Routes } from '@angular/router';
+import { AccountComponent } from './account/account.component';
+import { NotfoundComponent } from './notfound/notfound.component';
 
+
+
+const appRoutes: Routes = [
+  { path: '', component: TabComponent },
+  { path: 'account', component: AccountComponent  }
+];
 
 
 @NgModule({
@@ -44,7 +53,9 @@ import { MessagePipe } from './message-pipe.pipe';
         SettingComponent,
         RightmenuComponent,
         MessagePipe,
-        Autosize
+        Autosize,
+        AccountComponent,
+        NotfoundComponent
     ],
     entryComponents: [
         AuthentificationDialog
@@ -54,7 +65,9 @@ import { MessagePipe } from './message-pipe.pipe';
         AngularFireModule.initializeApp(firebaseConfig),
         MaterialModule.forRoot(),
         FormsModule,
-        HttpModule
+        HttpModule,
+        RouterModule.forRoot(appRoutes)
+
     ],
     providers: [UsersService],
     bootstrap: [AppComponent]

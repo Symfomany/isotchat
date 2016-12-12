@@ -2,7 +2,7 @@
     <md-tab-group>
         <md-tab class="full-size">
             <template md-tab-label>
-                <i class="material-icons">chat</i>
+                <a routerLink="/"><i class="material-icons">chat</i></a>
             </template>
             <app-tchat></app-tchat>
         </md-tab>
@@ -13,9 +13,11 @@
             <app-notifications></app-notifications>
         </md-tab>
         <md-tab class="full-size">
-            <template md-tab-label>
-                <i class="material-icons">account_circle</i>
-            </template>
+            <a routerLink="/account">
+                <template md-tab-label>
+                    <i class="material-icons">account_circle</i>
+                </template>
+            </a>
             <app-setting></app-setting>
         </md-tab>
 
