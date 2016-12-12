@@ -1,4 +1,4 @@
-import { Component, OnInit, style, animate, transition, trigger } from '@angular/core';
+import { animate, Component, Input, OnInit, style, transition, trigger } from '@angular/core';
 import { AngularFire, FirebaseListObservable } from 'angularfire2';
 declare var $: any;
 
@@ -26,7 +26,7 @@ export class MessagesComponent implements OnInit {
      * @type {Array<any>}
      * @memberOf MessagesComponent
      */
-    public messages: FirebaseListObservable<any[]>;
+    @Input() public messages: FirebaseListObservable<any[]>;
 
     public isLoaded = true;
 
@@ -62,6 +62,28 @@ export class MessagesComponent implements OnInit {
             }
         );
 
+    }
+
+    /**
+     * 
+     * @readonly
+     * 
+     * @memberOf MessagesComponent
+     */
+    get getMessages() {
+        return this.messages;
+    }
+
+
+    /**
+     * 
+     * @readonly
+     * 
+     * @memberOf MessagesComponent
+     */
+
+    set setMessages(obj: any) {
+        this.messages = obj;
     }
 
     /**

@@ -31,10 +31,6 @@ import { appRoutes } from './routes';
 
 
 
-const appRoutes: Routes = [
-    { path: '', component: TabComponent },
-    { path: 'account', component: AccountComponent }
-];
 
 
 @NgModule({

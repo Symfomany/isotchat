@@ -12,8 +12,6 @@ export class TchatComponent implements OnInit {
 
   ngOnInit() {
     let action = this.route.snapshot.params['action'];
-    console.log("coucou");
-    console.log(action);
   }
 
 }
