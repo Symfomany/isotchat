@@ -8,5 +8,17 @@ import { Component } from '@angular/core';
 })
 export class AuthentificationDialog {
 
+  public visible:boolean = true;
+
   constructor(public dialogRef: MdDialogRef<AuthentificationDialog>) { }
+
+  /**
+   * 
+   * @memberOf AuthentificationDialog
+  
+   */
+  toggle(visible:boolean){
+    this.visible = visible;
+  }
+
 }
