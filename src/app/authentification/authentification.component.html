@@ -8,23 +8,47 @@
                 </h2>
             </div>
 
-            <div class="modal-body">
-                <md-input placeholder="Email" style="width: 100%"></md-input>
-                <md-input placeholder="Password" style="width: 100%"></md-input>
 
-                <a style="display:block">
-                    <img style="width: 200px" src="http://www.freeiconspng.com/uploads/facebook-login-button-png-11.png" />
-                </a>
-                <a style="display:block">
-                    <img style="width: 200px" src="http://commondatastorage.googleapis.com/io-2013/presentations/808/images/sign-in-button.png" />
-                </a>
+            <form #authForm="ngForm" (ngSubmit)="onSubmit()">
 
-            </div>
+                <div class="modal-body">
 
-            <div class="modal-footer">
-                <button class="md-primary" (click)="toggle(true)" md-no-ink md-raised-button type="button" data-dismiss="modal">Connexion</button>
-                <button md-button type="button" (click)="toggle(false)">Inscription</button>
-            </div>
+                    <md-input dividerColor="warn" #email required name="email" type="email" placeholder="Email" style="width: 100%">
+                        <span md-prefix><i class="material-icons">email</i></span>
+                    </md-input>
+
+                    <div *ngIf="!email.valid && (email.dirty || email.touched)">
+                        <div [hidden]="!email.errors.required">
+                            Email is required
+                        </div>
+                        <div [hidden]="!email.errors.email">
+                            Email must be valid.
+                        </div>
+                    </div>
+
+
+                    <md-input required name="password" type="password" placeholder="Password" style="width: 100%">
+                        <span md-prefix><i class="material-icons">remove_red_eye</i></span>
+                    </md-input>
+
+
+
+                    <a style="display:block">
+                        <img style="width: 200px" src="http://www.freeiconspng.com/uploads/facebook-login-button-png-11.png" />
+                    </a>
+                    <a style="display:block">
+                        <img style="width: 200px" src="http://commondatastorage.googleapis.com/io-2013/presentations/808/images/sign-in-button.png" />
+                    </a>
+
+                </div>
+
+                <div class="modal-footer">
+                    <button class="md-primary" (click)="toggle(true)" md-no-ink md-raised-button type="button" [disabled]="!authForm.form.valid" data-dismiss="modal">Connexion</button>
+                    <button md-button type="button" (click)="toggle(false)">Inscription</button>
+                </div>
+
+            </form>
+
         </div>
         <!-- modal-content -->
     </div>

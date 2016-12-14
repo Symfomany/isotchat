@@ -7,6 +7,12 @@ Simple Application for Angular2 with Webpack :
 ![enter image description here](./screens/one.png)
 
 
+### Demo/ Docs on Angular2-material components
+
+
+[https://github.com/angular/material2/tree/master/src/demo-app](https://github.com/angular/material2/tree/master/src/demo-app)
+
+
 ### Firebase CLI
 
 [https://firebase.google.com/docs/cli/](https://firebase.google.com/docs/cli/)
